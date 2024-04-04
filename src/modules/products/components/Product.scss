@@ -2,6 +2,9 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
+  @include md {
+    gap: 24px;
+  }
   @include sm {
     grid-template-columns: auto;
   }
