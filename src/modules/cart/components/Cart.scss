@@ -3,3 +3,30 @@
     width: 100%;
   }
 }
+
+.Cart-ItemSkeleton {
+  height: 86px;
+  margin-bottom: 16px;
+  &:last-child {
+    margin-bottom: 24px;
+  }
+  @include sm {
+    height: 146px;
+  }
+}
+
+.Cart-CheckoutSkeletonWrapper {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.Cart-CheckoutSkeleton {
+  width: 300px;
+  height: 136px;
+  @include md {
+    height: 130px;
+  }
+  @include xs {
+    width: 100%;
+  }
+}

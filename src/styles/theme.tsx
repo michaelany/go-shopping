@@ -93,5 +93,10 @@ export const THEME: ThemeOptions = {
         color: 'secondary',
       },
     },
+    MuiSkeleton: {
+      defaultProps: {
+        variant: 'rounded',
+      },
+    },
   },
 }

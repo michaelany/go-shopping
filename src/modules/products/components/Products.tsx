@@ -1,4 +1,4 @@
-import {Badge, CircularProgress} from '@mui/material'
+import {Badge, Skeleton} from '@mui/material'
 
 import './Products.scss'
 import {ProductItem, useFetchProducts} from '#modules'
@@ -13,15 +13,17 @@ export default function Products() {
           Products
         </Badge>
       </h1>
-      {products ? (
-        <ul className="Products-List">
-          {products.map((product) => (
-            <ProductItem key={product.id} product={product} />
-          ))}
-        </ul>
-      ) : (
-        <CircularProgress />
-      )}
+      <ul className="Products-List">
+        {products
+          ? products.map((product) => (
+              <ProductItem key={product.id} product={product} />
+            ))
+          : skeletons.map((_, index) => (
+              <Skeleton key={index} component="li" height={432} />
+            ))}
+      </ul>
     </section>
   )
 }
+
+const skeletons = new Array(8).fill('')

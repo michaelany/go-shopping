@@ -30,8 +30,8 @@ export default function Header() {
         >
           Products
         </Button>
+        <CartLink />
       </nav>
-      <CartLink />
     </AppBar>
   )
 }

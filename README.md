@@ -1,5 +1,5 @@
 <div align="center">
-    <img a width="68" src="public/logo.svg" alt="GO Shopping" />
+    <img width="68" src="public/logo.svg" alt="GO Shopping" />
 </div>
 
 <h1 align="center">GO Shopping</h1>

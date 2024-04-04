@@ -1,7 +1,7 @@
 import {useParams, Link} from 'react-router-dom'
 import {
   Breadcrumbs,
-  CircularProgress,
+  Skeleton,
   Link as MuiLink,
   Box,
   Chip,
@@ -58,7 +58,15 @@ export default function Product() {
           </div>
         </>
       ) : (
-        <CircularProgress />
+        <>
+          <Skeleton className="Product-TitleSkeleton" />
+          <div className="Product-Content">
+            <Skeleton className="Product-ImageSkeleton" />
+            <div>
+              <Skeleton height={300} />
+            </div>
+          </div>
+        </>
       )}
     </section>
   )

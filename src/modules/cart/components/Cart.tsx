@@ -1,5 +1,5 @@
 import {Link} from 'react-router-dom'
-import {Box, Badge, Button, CircularProgress} from '@mui/material'
+import {Box, Badge, Button, Skeleton} from '@mui/material'
 import {GridViewRounded as GridViewRoundedIcon} from '@mui/icons-material'
 
 import './Cart.scss'
@@ -26,7 +26,7 @@ export default function Cart() {
         <CartContent />
       ) : (
         <>
-          <Box component="p" mb={3}>
+          <Box component="p" mb={4}>
             Your cart is empty...
           </Box>
           <Button
@@ -49,7 +49,19 @@ const CartContent = () => {
   const cart = useStore((state) => state.cart)
   const {data: products} = useFetchProducts()
 
-  if (!products) return <CircularProgress />
+  if (!products)
+    return (
+      <>
+        <ul>
+          {cart.map((item) => (
+            <Skeleton key={item.productId} className="Cart-ItemSkeleton" />
+          ))}
+        </ul>
+        <div className="Cart-CheckoutSkeletonWrapper">
+          <Skeleton className="Cart-CheckoutSkeleton" />
+        </div>
+      </>
+    )
 
   const cartProducts: ICartProduct[] = cart.map((item) => ({
     product: products.find((product) => product.id === item.productId)!,

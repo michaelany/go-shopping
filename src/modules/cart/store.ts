@@ -10,10 +10,16 @@ export interface ICartSlice {
   clearCart: () => void
 }
 
+// localStorage.setItem(storageProp, JSON.stringify(value))
+
 export const createCartSlice: TCreateSlice<ICartSlice> = (set) => ({
-  cart: [],
+  cart: localStorage[storageProp] ? JSON.parse(localStorage[storageProp]) : [],
   addNewCartItem: (productId) =>
-    set((state) => ({cart: [...state.cart, {productId, count: 1}]})),
+    set((state) => {
+      const newCart = [...state.cart, {productId, count: 1}]
+      localStorage.setItem(storageProp, JSON.stringify(newCart))
+      return {cart: newCart}
+    }),
   addCartItemCount: (productId) =>
     set((state) => {
       const newCart = [...state.cart]
@@ -22,6 +28,7 @@ export const createCartSlice: TCreateSlice<ICartSlice> = (set) => ({
         (item) => item.productId === productId
       )
       newCart[itemIndex] = {productId, count: currentItem.count + 1}
+      localStorage.setItem(storageProp, JSON.stringify(newCart))
       return {cart: newCart}
     }),
   removeCartItemCount: (productId) =>
@@ -32,14 +39,24 @@ export const createCartSlice: TCreateSlice<ICartSlice> = (set) => ({
         (item) => item.productId === productId
       )
       newCart[itemIndex] = {productId, count: currentItem.count - 1}
+      localStorage.setItem(storageProp, JSON.stringify(newCart))
       return {cart: newCart}
     }),
   removeCartItem: (productId) =>
-    set((state) => ({
-      cart: state.cart.filter((item) => item.productId !== productId),
-    })),
+    set((state) => {
+      const newCart = state.cart.filter((item) => item.productId !== productId)
+      localStorage.setItem(storageProp, JSON.stringify(newCart))
+      return {
+        cart: newCart,
+      }
+    }),
   clearCart: () =>
-    set(() => ({
-      cart: [],
-    })),
+    set(() => {
+      localStorage.clear()
+      return {
+        cart: [],
+      }
+    }),
 })
+
+const storageProp = 'cart'

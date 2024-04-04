@@ -28,7 +28,7 @@
 }
 
 .Snackbar-Close {
-  @include xs {
+  @include sm {
     display: none;
   }
 }
