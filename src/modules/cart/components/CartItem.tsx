@@ -59,7 +59,11 @@ export default function CartItem({product, count}: ICartItemProps) {
         </Stack>
         <Stack spacing={2} justifyContent="end">
           <Price amount={product.price * count} />
-          <IconButton aria-label="remove item" onClick={handleItemRemove}>
+          <IconButton
+            className="CartItem-Remove"
+            aria-label="remove item"
+            onClick={handleItemRemove}
+          >
             <DeleteIcon />
           </IconButton>
         </Stack>

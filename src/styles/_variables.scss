@@ -12,11 +12,16 @@ $fs-st: 16px;
 $fs-sm: 14px;
 $fs-xs: 12px;
 
+$radius: 12px;
+$header-height: 60px;
+
+$breakpoint_xs: 399px;
+$breakpoint_sm: 699px;
+$breakpoint_md: 959px;
+$breakpoint_lg: 1199px;
+
 $duration_1: 150ms;
 $duration_2: 500ms;
 
 $ease_out: cubic-bezier(0, 0, 0.2, 1);
 $ease_in-out: cubic-bezier(0.4, 0, 0.2, 1);
-
-$radius: 12px;
-$header-height: 60px;

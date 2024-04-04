@@ -6,6 +6,14 @@
   flex-direction: row;
   justify-content: space-between;
   gap: 36px;
+  @include md {
+    padding-left: 12px;
+    padding-right: 12px;
+    gap: 12px;
+  }
+  @include sm {
+    gap: 0;
+  }
 }
 
 .Header-Navigation {
@@ -29,6 +37,13 @@
   }
   @include hover {
     color: $color_primary;
+  }
+  @include sm {
+    &_logo {
+      p {
+        display: none;
+      }
+    }
   }
 }
 

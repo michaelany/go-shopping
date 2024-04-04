@@ -33,7 +33,7 @@ export default function CartCheckout({cartProducts}: ICartCheckoutProps) {
   return (
     <div className="CartCheckout">
       <div className="CartCheckout-Content">
-        <Stack spacing={4}>
+        <Stack>
           <p className="CartCheckout-Subtotal">Subtotal:</p>
           <Price large amount={totalPrice} />
         </Stack>

@@ -1,0 +1,5 @@
+.MuiButton-sizeLarge {
+  @include md {
+    min-height: 46px;
+  }
+}

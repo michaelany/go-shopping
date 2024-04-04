@@ -6,4 +6,10 @@
   &_large {
     font-size: $fs-xl;
   }
+  @include md {
+    font-size: $fs-md;
+    &_large {
+      font-size: $fs-lg;
+    }
+  }
 }

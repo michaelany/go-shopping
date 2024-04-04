@@ -24,6 +24,7 @@ const action: SnackbarAction = (snackbarId) => {
   return (
     <>
       <IconButton
+        className="Snackbar-Close"
         size="medium"
         color="inherit"
         aria-label="close"

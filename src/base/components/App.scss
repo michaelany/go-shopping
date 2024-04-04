@@ -1,12 +1,14 @@
 .App {
   @include animation(fadeIn);
-  min-width: 1200px;
 }
 
 .App-Content {
   padding: 120px 40px 80px;
   max-width: 1280px;
   margin: auto;
+  @include md {
+    padding: 96px 20px 60px;
+  }
 }
 
 .App-Fething {
@@ -23,4 +25,10 @@
   height: 40px;
   padding: 0;
   z-index: 10000;
+}
+
+.Snackbar-Close {
+  @include xs {
+    display: none;
+  }
 }

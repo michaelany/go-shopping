@@ -20,3 +20,27 @@
 @mixin animation($animation, $delay: 0ms) {
   animation: $animation $duration_2 $ease_in-out $delay both;
 }
+
+@mixin xs {
+  @media (max-width: $breakpoint_xs) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (max-width: $breakpoint_sm) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media (max-width: $breakpoint_md) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (max-width: $breakpoint_lg) {
+    @content;
+  }
+}

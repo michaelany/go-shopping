@@ -1,2 +1,5 @@
-.Cart-Content {
+.Cart-Button {
+  @include xs {
+    width: 100%;
+  }
 }

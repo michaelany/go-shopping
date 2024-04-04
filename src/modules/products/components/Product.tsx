@@ -50,7 +50,7 @@ export default function Product() {
                   )
                 </p>
               </Stack>
-              <Stack spacing={3} mb={1}>
+              <Stack spacing={2.5} mb={1}>
                 <Price large amount={product.price} />
                 <ProductAddToCart large product={product} />
               </Stack>

@@ -31,6 +31,7 @@ export default function Cart() {
           </Box>
           <Button
             component={Link}
+            className="Cart-Button"
             size="large"
             variant="contained"
             endIcon={<GridViewRoundedIcon />}
@@ -57,7 +58,7 @@ const CartContent = () => {
 
   return (
     <>
-      <ul className="Cart-Content">
+      <ul>
         {cartProducts.map((item) => (
           <CartItem
             key={item.product.id}

@@ -10,6 +10,10 @@
   &:last-child {
     margin-bottom: 24px;
   }
+  @include sm {
+    row-gap: 12px;
+    grid-template-columns: auto;
+  }
 }
 
 .CartItem-Image {
@@ -34,11 +38,14 @@
   text-align: center;
   width: 48px;
   font-size: $fs-lg;
+  @include md {
+    width: 40px;
+    font-size: $fs-md;
+  }
 }
 
-.CartCheckout-Gst {
-  padding-top: 8px;
-  color: $color_grey;
-  text-align: right;
-  margin-bottom: 16px;
+.CartItem-Remove {
+  @include xs {
+    display: none;
+  }
 }
