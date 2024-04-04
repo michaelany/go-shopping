@@ -1,0 +1,38 @@
+.Header {
+  padding-left: 24px;
+  padding-right: 24px;
+  height: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 36px;
+}
+
+.Header-Navigation {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Header-Link {
+  padding-right: 16px;
+  padding-left: 16px;
+  border-radius: 0;
+  &_logo {
+    font-size: 28px;
+    gap: 6px;
+    letter-spacing: -1.5px;
+    flex-shrink: 0;
+  }
+  &_active {
+    color: $color_primary;
+  }
+  @include hover {
+    color: $color_primary;
+  }
+}
+
+.Header-CartIcon {
+  width: 32px;
+  height: 32px;
+}

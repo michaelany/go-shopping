@@ -1,0 +1,9 @@
+.Price {
+  line-height: 1;
+  color: $color_primary;
+  font-weight: 700;
+  font-size: $fs-lg;
+  &_large {
+    font-size: $fs-xl;
+  }
+}

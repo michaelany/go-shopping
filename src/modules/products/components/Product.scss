@@ -1,0 +1,17 @@
+.Product-Content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.Product-Image {
+  object-fit: contain;
+  width: 100%;
+  max-height: 600px;
+}
+
+.Product-Rating {
+  padding-top: 2px;
+  font-size: $fs-md;
+  color: $color_grey;
+}

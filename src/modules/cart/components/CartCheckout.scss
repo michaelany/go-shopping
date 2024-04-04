@@ -1,0 +1,18 @@
+.CartCheckout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.CartCheckout-Content {
+  @extend .CartCheckout;
+}
+
+.CartCheckout-Subtotal {
+  font-size: $fs-lg;
+  font-weight: 700;
+}
+
+.CartCheckout-Button {
+  width: 300px;
+}

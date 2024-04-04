@@ -1,0 +1,12 @@
+$fonts: ('regular' 400, 'bold' 700);
+
+@each $type, $value in $fonts {
+  @font-face {
+    font-family: 'euclidCircularA';
+    font-weight: $value;
+    font-style: normal;
+    font-display: swap;
+    src: url('/src/assets/fonts/euclid-circular-a-#{$type}.woff2')
+      format('woff2');
+  }
+}
